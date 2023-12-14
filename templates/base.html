@@ -144,7 +144,7 @@
                         </p>
                         <div>
                             <form
-                                action=""
+                                action="{% url 'website:newsletter' %}"
                                 method="post" class="subscription relative">
                                 {% csrf_token %}
                                 <div class="input-group d-flex flex-row">
