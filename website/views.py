@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from website.forms import ContactForm, NewsletterForm
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib import messages
 # Create your views here.
 
 
@@ -15,6 +16,9 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.add_message(request, messages.SUCCESS, 'Thank you for your message')
+        else:
+            messages.add_message(request, messages.ERROR, 'Form is not valid')
             
         
         
@@ -32,6 +36,7 @@ def newsletter_view(request):
         form = NewsletterForm(request.POST)
         if form.is_valid():
             form.save()
+
         return HttpResponseRedirect('/')
     else:
         return HttpResponseRedirect('/')
