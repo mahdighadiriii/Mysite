@@ -166,6 +166,8 @@ INTERNAL_IPS = [
 
 SUMMERNOTE_THEME = 'bs4'
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 SUMMERNOTE_CONFIG = {
     # Using SummernoteWidget - iframe mode, default
     'iframe': True,
