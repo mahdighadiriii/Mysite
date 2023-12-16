@@ -36,6 +36,7 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('robots.txt', include('robots.urls')),
     path('debug/', include('debug_toolbar.urls')),
+    path('captcha/', include('captcha.urls')),
 
 ]
 

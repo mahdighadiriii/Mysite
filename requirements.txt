@@ -10,3 +10,4 @@ django-robots
 django-debug-toolbar
 django-taggit
 recaptcha
+django-multi-captcha-admin
