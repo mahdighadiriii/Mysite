@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'robots',
     'debug_toolbar',
     'taggit',
+    'django_recaptcha',
+    'captcha',
     
 
     'website',
@@ -198,3 +200,12 @@ SUMMERNOTE_CONFIG = {
         ],
     }
 }
+
+
+
+
+#recaptcha
+
+RECAPTCHA_PUBLIC_KEY = '6LccbDMpAAAAAE2Lb0u1P3r5h-M_bk-tegrCPLhB'
+RECAPTCHA_PRIVATE_KEY = '6LccbDMpAAAAAGylqUbYTSisikE4Upjyzf8_tPCU'
+SILENCED_SYSTEM_CHECKS = ['django_recaptcha.recaptcha_test_key_error']
