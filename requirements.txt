@@ -6,3 +6,4 @@ typing-extensions==4.8.0
 pillow
 django_next_prev
 django-extensions
+django-robots
