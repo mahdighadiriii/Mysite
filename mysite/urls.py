@@ -37,6 +37,7 @@ urlpatterns = [
     path('robots.txt', include('robots.urls')),
     path('debug/', include('debug_toolbar.urls')),
     path('captcha/', include('captcha.urls')),
+    path('accounts/', include('allauth.urls')),
 
 ]
 
