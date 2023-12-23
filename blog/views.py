@@ -2,9 +2,11 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, get_object_or_404
 from blog.models import Post
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+@login_required
 def blog_view(request,**kwargs):
     posts = Post.objects.filter(status=1).order_by('-published_date')
     if kwargs.get('cat_name') != None:
@@ -24,6 +26,7 @@ def blog_view(request,**kwargs):
     context = {'posts':posts}
     return render(request,'blog/blog-home.html',context)
 
+@login_required
 def blog_single(request,pid):
     posts = Post.objects.filter(status=1)
     post = get_object_or_404(posts,pk=pid)
@@ -39,7 +42,7 @@ def blog_single(request,pid):
     }
     return render (request,'blog/blog-single.html',context)
 
-
+@login_required
 def blog_search(request):
     #print(request.__dict__)
     posts = Post.objects.filter(status=1)
