@@ -11,3 +11,6 @@ django-debug-toolbar
 django-taggit
 recaptcha
 django-multi-captcha-admin
+django-widget-tweaks
+django-crispy-forms
+crispy-bootstrap5

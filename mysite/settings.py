@@ -64,10 +64,16 @@ INSTALLED_APPS = [
     'taggit',
     'django_recaptcha',
     'captcha',
-
+    'crispy_forms',
+    "crispy_bootstrap5",
     'website',
     'blog',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
 
 # sites framework
 SITE_ID = 2
@@ -250,4 +256,3 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-LOGIN_REDIRECT_URL = '/'
