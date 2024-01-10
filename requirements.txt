@@ -14,3 +14,6 @@ django-multi-captcha-admin
 django-widget-tweaks
 django-crispy-forms
 crispy-bootstrap5
+
+
+
